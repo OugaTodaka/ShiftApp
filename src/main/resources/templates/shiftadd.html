@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>シフト追加</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>シフト追加</h1>
+<form th:action="@{/index}" method="post">
+	<p>
+		<select>
+		<option value="0">選択してください</option>
+		<option th:each="user:${users}" th:inline="text" th:value="${user.id}">[[${user.username}]]</option>
+		</select>
+	</p>
+	<p><input type="date" placeholder="日付" required /></p>
+	<p><input type="submit" value="登録"></p>
+</form>
+<a href="/index">戻る</a>
+</body>
+</html>

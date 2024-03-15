@@ -1,0 +1,41 @@
+@charset "UTF-8";
+h1,h2,h3,p,a{
+	margin: 0;
+	padding: 0;
+}
+
+
+h1{
+	color: aliceblue;
+	background-color: darkblue;
+	width:100%;
+	margin-bottom: 10px;
+}
+
+a{
+  display       : inline-block;
+  border-radius : 100%;
+  font-size     : 13pt;
+  text-align    : center;
+  cursor        : pointer;
+  padding       : 12px 12px;
+  background    : #4da6ff;
+  color         : #ffffff;
+  line-height   : 1em;
+  transition    : .3s;
+  border        : 2px solid #4da6ff;
+}
+a:hover {
+  color         : #4da6ff;
+  background    : #ffffff;
+}
+input{
+	margin:10px;
+}
+
+table,td,th{
+	text-align: center;
+	margin:10px;
+	border: 1px black solid;
+	padding: 2px;
+}

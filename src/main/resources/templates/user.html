@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>従業員一覧</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>従業員一覧</h1>
+<a href="/useradd">追加</a>
+<table>
+	<thead>
+		<tr>
+			<th>No.</th>
+			<th>UserID</th>
+			<th>姓</th>
+			<th>名</th>
+			<th>役職</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr th:each="user:${list}">
+			<td th:text="*{user.id}"></td>
+			<td th:text="*{user.username}"></td>
+			<td th:text="*{user.last_name}"></td>
+			<td th:text="*{user.first_name}"></td>
+			<td th:text="*{user.job.job_name}"></td>
+		</tr>
+	</tbody>
+</table>
+<a href="/index">戻る</a>
+</body>
+</html>

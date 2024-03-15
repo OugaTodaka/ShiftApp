@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>シフト表</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>シフト表</h1>
+<a href="/shiftadd">シフト追加</a>
+<table>
+	<thead>
+		<tr>
+			<th>No.</th>
+			<th>日付</th>
+			<th>UserID</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr th:each="shift:${list}">
+			<td th:text="*{shift.id}"></td>
+			<td th:text="*{shift.date_at}"></td>
+			<td th:text="*{shift.user.username}"></td>
+		</tr>
+	</tbody>
+</table>
+
+<h2><a href="/user">従業員一覧</a></h2>
+</body>
+</html>
