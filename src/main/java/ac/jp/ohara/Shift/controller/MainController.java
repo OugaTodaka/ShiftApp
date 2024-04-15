@@ -65,7 +65,7 @@ public class MainController {
 		model.addObject("users",list);
 		return model;
 	}
-	
+
 	@PostMapping("/shiftadd")
 	public String shiftadd_run(@ModelAttribute ShiftAdd shiftadd ) {
 		return "redirect:/index";
